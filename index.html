@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social proof section</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+      :root{
+        --very-dark-magenta: hsl(300, 43%, 22%);
+        --soft-pink: hsl(333, 80%, 67%);
+        --dark-grayish-magenta: hsl(303, 10%, 53%);
+        --light-grayish-magenta: hsl(300, 24%, 96%);
+        --white: hsl(0, 0%, 100%);
+      }
+
+      * {
+        font-family: 'Spartan', sans-serif;
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+      }
+
+      body  {
+        background: url('images/bg-pattern-top-mobile.svg'), url('images/bg-pattern-bottom-mobile.svg');
+        background-position: top, bottom;
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      .container {
+        margin-right: auto;
+        margin-left: auto;
+        
+        box-sizing: border-box;
+        max-width: 1110px;
+
+        padding: 5rem 1.7rem;
+
+        
+      }
+      h1{
+        color: var(--very-dark-magenta);
+        font-size: 2rem;
+      }
+      .review-author img {
+        border-radius: 50%;
+        height: 3rem;
+        margin-right: 1.5rem;
+      }
+
+      .intro, .rates {
+        text-align: center;
+      }
+
+      .review {
+        background-color: var(--very-dark-magenta);
+        border-radius: 5px;
+        margin: 1rem 0;
+      }
+      .rates {
+        margin-bottom: 3rem;
+      }
+      .rate {
+        background-color: var(--light-grayish-magenta);
+        padding: 1rem;
+        border-radius: 5px;
+        margin: 1rem 0;
+      }
+
+      .stars {
+        margin-bottom: 1rem;
+      }
+
+      span {
+        color: var(--very-dark-magenta);
+        font-weight: 700;
+      }
+
+      .intro p {
+        color: var(--dark-grayish-magenta);
+        line-height: 1.5rem;
+        font-weight: 400;
+        margin: 1.7rem 0;
+      }
+      .reviews {
+        color: var(--white);
+      }
+      .review {
+         padding: 2rem;
+      }
+      .review-author {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+      .review-author>div>p {
+        color: var(--soft-pink);
+        font-size: .9rem;
+        margin-top: .5rem;
+      }
+      .review>p {
+        font-size: .8rem;
+        line-height: 1.5rem;
+      }
+
+      h4 {
+        font-size: .9rem;
+      }
+
+
+      @media (min-width: 1110px) {
+        body {
+          background: url('images/bg-pattern-top-desktop.svg') no-repeat top left, url('images/bg-pattern-bottom-desktop.svg') no-repeat bottom right;
+        }
+
+        .container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto min-content;
+          grid-gap: 2rem;
+          padding-top: 8rem;          
+        }
+
+        .intro {
+          padding-right: 6rem;
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+          text-align: left;
+        }
+        .rates {
+          grid-column: 2 / 3;
+          grid-row: 1 / 2;
+        }
+        .reviews {
+          grid-column: 1 / 3;
+          grid-row: 2 / 3;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 2rem;
+        }
+        .review {
+          margin: 0;
+        }
+        .first {
+          margin-bottom: 2rem;
+        }
+        .second {
+          margin: 1rem ;
+        }
+        .third {
+          margin-top: 2rem;
+        }
+
+        h1 {
+          font-size: 3rem;
+        }
+        .rates {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .one {
+          align-self: flex-start;
+        }
+        .two {
+          align-self: center;
+        }
+
+         .three {
+          align-self: flex-end;
+        }
+
+        .rate {
+          display: flex;
+          align-items: center;
+          width: 80%;
+          margin-top: .5rem;
+          margin-bottom: .5rem;
+        }
+        .rate>div {
+          margin: 0 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <div class="intro">
+          <h1>10,000+ of our users love our products.</h1>
+          <p>We only provide great products combined with excellent customer service.
+    See what our satisfied customers are saying about our services.</p>
+        </div>
+        <div class="rates">
+          <div class="rate one">
+            <div class="stars">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+            </div>
+            <span>Rated 5 Stars in Reviews</span>
+          </div>
+          <div class="rate two">
+            <div class="stars">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+            </div>
+            <span>Rated 5 Stars in Report Guru</span>
+          </div>
+          <div class="rate three">
+            <div class="stars">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+              <img src="images/icon-star.svg">
+            </div>
+            <span>Rated 5 Stars in BestTech</span>
+        </div>
+        </div>
+        <div class="reviews">
+          <div class="review first">
+            <div class="review-author">
+              <img alt="reviewer-photo" src="images/image-colton.jpg">
+              <div>
+                <h4>Colton Smith</h4>
+                <p>Verified Buyer</p>
+              </div>
+            </div>
+            <p>
+              "We needed the same printed design as the one we had ordered a week prior.
+               Not only did they find the original order, but we also received it in time.
+              Excellent!"
+            </p>
+          </div>
+          <div class="review second">
+            <div class="review-author">
+              <img alt="reviewer-photo" src="images/image-irene.jpg">
+              <div>
+                <h4>Irene Roberts</h4>
+                <p>Verified Buyer</p>
+              </div>
+            </div>
+            <p>
+              "Customer service is always excellent and very quick turn around. Completely
+              delighted with the simplicity of the purchase and the speed of delivery."
+            </p>
+          </div>
+          <div class="review third">
+            <div class="review-author">
+              <img alt="reviewer-photo" src="images/image-anne.jpg">
+              <div>
+                <h4>Anne Wallace</h4>
+                <p>Verified Buyer</p>
+              </div>
+            </div>
+            <p>
+              "Put an order with this company and can only praise them for the very high
+    standard. Will definitely use them again and recommend them to everyone!"
+            </p>
+          </div>
+        </div>        
+      </div>
+  </body>
+</html>
